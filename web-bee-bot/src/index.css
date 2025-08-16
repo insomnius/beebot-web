@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Comic Sans MS', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .bee-button {
+    @apply bg-bee-yellow hover:bg-yellow-400 text-bee-black font-bold py-4 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 border-4 border-bee-black;
+  }
+  
+  .grid-cell {
+    @apply w-16 h-16 border-2 border-gray-300 flex items-center justify-center text-lg font-bold bg-white hover:bg-gray-50 transition-colors duration-200;
+  }
+  
+  .command-button {
+    @apply bg-bee-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-blue-700;
+  }
+  
+  .bee-robot {
+    @apply w-12 h-12 bg-bee-yellow rounded-full border-4 border-bee-black flex items-center justify-center text-2xl animate-bounce-slow;
+  }
+}
