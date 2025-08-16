@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        'bee-yellow': '#FFD700',
-        'bee-black': '#2C2C2C',
-        'bee-blue': '#4A90E2',
-        'bee-green': '#7ED321',
-        'bee-red': '#D0021B',
-        'bee-orange': '#F5A623',
+        'bee-yellow': 'var(--bee-yellow)',
+        'bee-black': 'var(--bee-black)',
+        'bee-blue': 'var(--bee-blue)',
+        'bee-green': 'var(--bee-green)',
+        'bee-red': 'var(--bee-red)',
+        'bee-orange': 'var(--bee-orange)',
       },
       fontFamily: {
         'kid': ['Comic Sans MS', 'cursive'],
@@ -29,8 +29,4 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
 }
