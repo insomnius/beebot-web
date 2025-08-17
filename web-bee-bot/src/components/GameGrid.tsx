@@ -22,15 +22,15 @@ const GameGrid: React.FC<GameGridProps> = ({ mat, beeBot, currentCommandIndex, i
 
   const getCellBackground = (cell: any, position: Position) => {
     if (position.x === beeBot.position.x && position.y === beeBot.position.y) {
-      return 'bg-bee-yellow border-4 border-bee-black';
+      return 'bg-[--color-bee-yellow] border-4 border-[--color-bee-black]';
     }
     
     if (cell.type === 'target') {
-      return 'bg-bee-green border-4 border-green-700';
+      return 'bg-[--color-bee-green] border-4 border-green-700';
     }
     
     if (cell.type === 'obstacle') {
-      return 'bg-bee-red border-4 border-red-700';
+      return 'bg-[--color-bee-red] border-4 border-red-700';
     }
     
     if (cell.type === 'letter') {
@@ -89,18 +89,18 @@ const GameGrid: React.FC<GameGridProps> = ({ mat, beeBot, currentCommandIndex, i
       </div>
 
       <div className="flex justify-center mb-4">
-        <div className="bg-bee-yellow px-4 py-2 rounded-lg border-2 border-bee-black">
+        <div className="bg-[--color-bee-yellow] px-4 py-2 rounded-lg border-2 border-[--color-bee-black]">
           <div className="text-center">
-            <div className="text-sm font-bold text-bee-black">Start</div>
-            <div className="text-xs text-bee-black">Position</div>
+            <div className="text-sm font-bold text-[--color-bee-black]">Start</div>
+            <div className="text-xs text-[--color-bee-black]">Position</div>
           </div>
         </div>
         <div className="mx-4 flex items-center">
-          <div className="w-8 h-1 bg-bee-black"></div>
-          <div className="text-bee-black mx-2">→</div>
-          <div className="w-8 h-1 bg-bee-black"></div>
+          <div className="w-8 h-1 bg-[--color-bee-black]"></div>
+          <div className="text-[--color-bee-black] mx-2">→</div>
+          <div className="w-8 h-1 bg-[--color-bee-black]"></div>
         </div>
-        <div className="bg-bee-green px-4 py-2 rounded-lg border-2 border-green-700">
+        <div className="bg-[--color-bee-green] px-4 py-2 rounded-lg border-2 border-green-700">
           <div className="text-center">
             <div className="text-sm font-bold text-white">Target</div>
             <div className="text-xs text-white">Goal</div>
@@ -137,9 +137,9 @@ const GameGrid: React.FC<GameGridProps> = ({ mat, beeBot, currentCommandIndex, i
       </div>
 
       <div className="text-center mt-4">
-        <div className="inline-flex items-center space-x-2 bg-bee-yellow px-4 py-2 rounded-lg border-2 border-bee-black">
-          <span className="text-sm font-bold text-bee-black">Bee-Bot Status:</span>
-          <span className={`text-sm font-bold ${beeBot.isMoving ? 'text-bee-green' : 'text-bee-blue'}`}>
+        <div className="inline-flex items-center space-x-2 bg-[--color-bee-yellow] px-4 py-2 rounded-lg border-2 border-[--color-bee-black]">
+          <span className="text-sm font-bold text-[--color-bee-black]">Bee-Bot Status:</span>
+          <span className={`text-sm font-bold ${beeBot.isMoving ? 'text-[--color-bee-green]' : 'text-[--color-bee-blue]'}`}>
             {beeBot.isMoving ? 'Moving...' : 'Ready'}
           </span>
         </div>

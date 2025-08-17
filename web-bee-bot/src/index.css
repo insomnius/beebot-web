@@ -1,17 +1,28 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --bee-yellow: #FFD700;
-    --bee-black: #2C2C2C;
-    --bee-blue: #4A90E2;
-    --bee-green: #7ED321;
-    --bee-red: #D0021B;
-    --bee-orange: #F5A623;
-  }
+@theme {
+  --color-bee-yellow: #FFD700;
+  --color-bee-black: #2C2C2C;
+  --color-bee-blue: #4A90E2;
+  --color-bee-green: #7ED321;
+  --color-bee-red: #D0021B;
+  --color-bee-orange: #F5A623;
+  
+  --font-family-kid: 'Comic Sans MS', cursive;
+  
+  --animation-bounce-slow: bounce 2s infinite;
+  --animation-pulse-slow: pulse 3s infinite;
+  --animation-wiggle: wiggle 1s ease-in-out infinite;
+}
 
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@layer base {
   body {
-    font-family: 'Comic Sans MS', cursive, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: var(--font-family-kid), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -23,7 +34,7 @@
 
 @layer components {
   .bee-button {
-    @apply bg-bee-yellow hover:bg-yellow-400 text-bee-black font-bold py-4 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 border-4 border-bee-black;
+    @apply bg-[--color-bee-yellow] hover:bg-yellow-400 text-[--color-bee-black] font-bold py-4 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 border-4 border-[--color-bee-black];
   }
   
   .grid-cell {
@@ -31,10 +42,11 @@
   }
   
   .command-button {
-    @apply bg-bee-blue hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-blue-700;
+    @apply bg-[--color-bee-blue] hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-blue-700;
   }
   
   .bee-robot {
-    @apply w-12 h-12 bg-bee-yellow rounded-full border-4 border-bee-black flex items-center justify-center text-2xl animate-bounce-slow;
+    @apply w-12 h-12 bg-[--color-bee-yellow] rounded-full border-4 border-[--color-bee-black] flex items-center justify-center text-2xl;
+    animation: var(--animation-bounce-slow);
   }
 }

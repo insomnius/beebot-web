@@ -60,17 +60,17 @@ const MatSelector: React.FC<MatSelectorProps> = ({
         </h3>
         
         <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="bg-bee-yellow rounded-lg p-3 border-2 border-bee-black">
+          <div className="bg-[--color-bee-yellow] rounded-lg p-3 border-2 border-[--color-bee-black]">
             <div className="flex items-center justify-center space-x-2">
-              <Star className="text-bee-black" size={20} />
+              <Star className="text-[--color-bee-black]" size={20} />
               <div>
-                <div className="text-lg font-bold text-bee-black font-kid">{currentScore}</div>
-                <div className="text-xs text-bee-black font-kid">Points</div>
+                <div className="text-lg font-bold text-[--color-bee-black] font-kid">{currentScore}</div>
+                <div className="text-xs text-[--color-bee-black] font-kid">Points</div>
               </div>
             </div>
           </div>
           
-          <div className="bg-bee-blue rounded-lg p-3 border-2 border-blue-700">
+          <div className="bg-[--color-bee-blue] rounded-lg p-3 border-2 border-blue-700">
             <div className="flex items-center justify-center space-x-2">
               <Trophy className="text-white" size={20} />
               <div>
@@ -168,31 +168,31 @@ const MatSelector: React.FC<MatSelectorProps> = ({
       </div>
 
       {/* Achievements */}
-      <div className="bg-bee-yellow rounded-lg p-4 border-2 border-bee-black">
-        <h5 className="font-bold text-bee-black text-sm mb-3 font-kid">
+      <div className="bg-[--color-bee-yellow] rounded-lg p-4 border-2 border-[--color-bee-black]">
+        <h5 className="font-bold text-[--color-bee-black] text-sm mb-3 font-kid">
           🏆 Recent Achievements:
         </h5>
         <div className="space-y-2">
           {currentScore >= 100 && (
-            <div className="flex items-center space-x-2 text-xs text-bee-black">
+            <div className="flex items-center space-x-2 text-xs text-[--color-bee-black]">
               <Star size={14} />
               <span className="font-kid">First Steps - Complete your first challenge!</span>
             </div>
           )}
           {currentScore >= 300 && (
-            <div className="flex items-center space-x-2 text-xs text-bee-black">
+            <div className="flex items-center space-x-2 text-xs text-[--color-bee-black]">
               <Trophy size={14} />
               <span className="font-kid">Programming Pro - Complete 3 challenges!</span>
             </div>
           )}
           {currentLevel >= 2 && (
-            <div className="flex items-center space-x-2 text-xs text-bee-black">
+            <div className="flex items-center space-x-2 text-xs text-[--color-bee-black]">
               <Target size={14} />
               <span className="font-kid">Level Up - Reached level {currentLevel}!</span>
             </div>
           )}
           {currentScore === 0 && (
-            <div className="text-xs text-bee-black font-kid text-center py-2">
+            <div className="text-xs text-[--color-bee-black] font-kid text-center py-2">
               Start playing to earn achievements! 🎯
             </div>
           )}

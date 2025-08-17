@@ -141,7 +141,7 @@ const CommandPanel: React.FC<CommandPanelProps> = ({
         <motion.button
           onClick={onExecuteCommands}
           disabled={isPlaying || commands.length === 0}
-          className="w-full bg-bee-green hover:bg-green-600 disabled:bg-gray-400 text-white font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 border-2 border-green-700 disabled:cursor-not-allowed font-kid text-lg"
+          className="w-full bg-[--color-bee-green] hover:bg-green-600 disabled:bg-gray-400 text-white font-bold py-4 px-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 border-2 border-green-700 disabled:cursor-not-allowed font-kid text-lg"
           whileHover={{ scale: isPlaying || commands.length === 0 ? 1 : 1.05 }}
           whileTap={{ scale: isPlaying || commands.length === 0 ? 1 : 0.95 }}
         >
@@ -155,7 +155,7 @@ const CommandPanel: React.FC<CommandPanelProps> = ({
           <motion.button
             onClick={onClearCommands}
             disabled={isPlaying || commands.length === 0}
-            className="bg-bee-orange hover:bg-orange-600 disabled:bg-gray-400 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-orange-700 disabled:cursor-not-allowed font-kid"
+            className="bg-[--color-bee-orange] hover:bg-orange-600 disabled:bg-gray-400 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-orange-700 disabled:cursor-not-allowed font-kid"
             whileHover={{ scale: isPlaying || commands.length === 0 ? 1 : 1.05 }}
             whileTap={{ scale: isPlaying || commands.length === 0 ? 1 : 0.95 }}
           >
@@ -168,7 +168,7 @@ const CommandPanel: React.FC<CommandPanelProps> = ({
           <motion.button
             onClick={onResetGame}
             disabled={isPlaying}
-            className="bg-bee-blue hover:bg-blue-600 disabled:bg-gray-400 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-blue-700 disabled:cursor-not-allowed font-kid"
+            className="bg-[--color-bee-blue] hover:bg-blue-600 disabled:bg-gray-400 text-white font-bold py-3 px-4 rounded-lg shadow-md transform hover:scale-105 transition-all duration-200 border-2 border-blue-700 disabled:cursor-not-allowed font-kid"
             whileHover={{ scale: isPlaying ? 1 : 1.05 }}
             whileTap={{ scale: isPlaying ? 1 : 0.95 }}
           >
@@ -181,11 +181,11 @@ const CommandPanel: React.FC<CommandPanelProps> = ({
       </div>
 
       {/* Tips */}
-      <div className="mt-6 p-3 bg-bee-yellow rounded-lg border-2 border-bee-black">
-        <h5 className="font-bold text-bee-black text-sm mb-2 font-kid">
+      <div className="mt-6 p-3 bg-[--color-bee-yellow] rounded-lg border-2 border-[--color-bee-black]">
+        <h5 className="font-bold text-[--color-bee-black] text-sm mb-2 font-kid">
           💡 Programming Tips:
         </h5>
-        <ul className="text-xs text-bee-black space-y-1 font-kid">
+        <ul className="text-xs text-[--color-bee-black] space-y-1 font-kid">
           <li>• Plan your route before starting</li>
           <li>• Use turns to change direction</li>
           <li>• Test your program step by step</li>
